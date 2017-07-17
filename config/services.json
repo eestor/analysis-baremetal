@@ -1,0 +1,49 @@
+{
+    "cloudantNoSQLDB": [{
+        "credentials": {
+            "username": "90faffdc-779a-4bf7-bddd-c6c04a7b7018-bluemix",
+            "password": "281665126ad1d72f8043b27c4f73c108afeaa06187c24f4cc01f91659f38678c",
+            "host": "90faffdc-779a-4bf7-bddd-c6c04a7b7018-bluemix.cloudant.com",
+            "port": 443,
+            "url": "https://90faffdc-779a-4bf7-bddd-c6c04a7b7018-bluemix:281665126ad1d72f8043b27c4f73c108afeaa06187c24f4cc01f91659f38678c@90faffdc-779a-4bf7-bddd-c6c04a7b7018-bluemix.cloudant.com"
+        },
+        "syslog_drain_url": null,
+        "label": "cloudantNoSQLDB",
+        "provider": null,
+        "plan": "Lite",
+        "name": "web-jup-db",
+        "tags": [
+            "data_management",
+            "ibm_created",
+            "ibm_dedicated_public"
+        ]
+    }],
+    "socket.io": {
+        "host": "https://web-jup-svr.mybluemix.net/"
+    },
+    "odm": {
+        "run_command": "/root/odm/run.sh",
+        "path_parameter_prefix": "--project-path",
+        "rerun_parameter_prefix": "--rerun"
+    },
+    "potree": {
+        "run_command": "/root/PotreeConverter/build/PotreeConverter/PotreeConverter",
+        "output_parameter": "-o",
+        "page_generator_parameter": "-p",
+        "page_generator_name": "web-output"
+    },
+    "watson_vr": {
+        "key":"818033e851e34630232cf53f53e095088e4deb98",
+        "classifier":"damage_1569962279"
+    },
+    "imagemagick": {
+        "run_command": "/usr/bin/convert",
+        "crop_prefix": "-crop",
+        "set_prefix": "-set", 
+        "set_filename": "filename:tile",
+        "set_filename_format": "%[fx:page.x]_%[fx:page.y]",
+        "repage": "+repage",
+        "adjoin": "+adjoin",
+        "tilename_suffix": "/tile_%[filename:tile].jpg"
+    }
+}

@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 768M
+  instances: 1
+  domain: au-syd.mybluemix.net
+  name: analysis-svr
+  host: analysis-svr
+  disk_quota: 2048M
